@@ -3,14 +3,12 @@ function isIntArray(arr) {
       return true;
     }
     
-    for (let number of arr) {
-      if(!Number.isInteger(number) || number == NaN){
+    for (let i = 0; i < arr.length; i++) {
+    if (!Number.isInteger(arr[i])) {
         return false;
-        console.log(number);
-      }
-      console.log(number);
-    return true;
     }
+    }
+      return true;
   }
-  
-    console.log(isIntArray([1, 2, 3, NaN]))
+
+  console.log(isIntArray([1, 2, 3, NaN]));
